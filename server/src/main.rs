@@ -3,7 +3,7 @@ use tower_http::services::{ServeDir};
 
 #[tokio::main]
 async fn main(){
-    let addr = "10.225.22.50:8080";
+    let addr = "127.0.0.1:8080";
     let listener = tokio::net::TcpListener::bind(addr).await.unwrap();
     println!("Server started on {addr:?}");
     axum::serve(listener,router()).await.unwrap();

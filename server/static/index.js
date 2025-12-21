@@ -1,7 +1,7 @@
-import init, { test } from './pkg/hcc07_org_site.js'
+import init, { test } from './pkg/client.js'
 
 async function run() {
-  await init("./pkg/hcc07_org_site_bg.wasm");
+  await init("./pkg/client_bg.wasm");
     const outputDiv = document.getElementById("output");
     outputDiv.innerText = test();
 }
